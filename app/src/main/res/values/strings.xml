@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Handle Errors</string>
+    <string name="error_invalid_email">That is not a valid email</string>
 </resources>
