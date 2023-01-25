@@ -8,10 +8,13 @@ import androidx.lifecycle.viewModelScope
 import com.fcenesiz.handleerrors.domain.SubmitEmailUseCase
 import com.fcenesiz.handleerrors.util.Resource
 import com.fcenesiz.handleerrors.util.UiText
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel(
-    private val submitEmailUseCase: SubmitEmailUseCase = SubmitEmailUseCase()
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val submitEmailUseCase: SubmitEmailUseCase
 ) : ViewModel() {
 
     var email by mutableStateOf("")

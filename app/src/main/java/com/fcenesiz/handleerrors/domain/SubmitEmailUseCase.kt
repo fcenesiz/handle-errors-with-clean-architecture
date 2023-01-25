@@ -4,9 +4,11 @@ import com.fcenesiz.handleerrors.R
 import com.fcenesiz.handleerrors.data.MyRepositoryImpl
 import com.fcenesiz.handleerrors.util.Resource
 import com.fcenesiz.handleerrors.util.UiText
+import javax.inject.Inject
 
-class SubmitEmailUseCase(
-    private val repository: MyRepository = MyRepositoryImpl()
+
+class SubmitEmailUseCase @Inject constructor(
+    private val repository: MyRepository
 ) {
 
     suspend fun execute(email: String): Resource<Unit> {
